@@ -33,8 +33,27 @@ h4 {
   margin-bottom: 44px;
 }
 
+pre, p {
+  margin-bottom: 0;
+}
+
 .lyrics {
   padding: 30px 40px;
+  background-color: #ffffff95;
+  box-shadow: 0 0 50px 10px #fffbf5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lyrics:hover {
+  transform: translateY(2px);
+}
+
+.background-story {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align:justify;
+  padding: 30px 30px;
   background-color: #ffffff95;
   box-shadow: 0 0 50px 10px #fffbf5;
 }
@@ -47,6 +66,15 @@ h4 {
   .lyrics {
     background: none;
   }
+
+  .background-story {
+    width: 100vw;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding-bottom: 80px;
+    background: linear-gradient(to bottom, #fff7ed70 80%, #F2E6D8 100%) no-repeat fixed;
+  }
+
   h4 {
     margin-bottom: 24px;
   }

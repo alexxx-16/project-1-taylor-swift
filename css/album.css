@@ -2,8 +2,9 @@ body {
   background: linear-gradient(135deg,#ffffff, #F2E6D8 50%, #C5AC8F 100%) no-repeat fixed;
   margin: 0;
   min-height:100vh ;
-  cursor: url("/project-1-taylor-swift/assets/icons/leaf.svg"),pointer;
+  cursor: url("/project-1-taylor-swift/assets/icons/leaf.svg"), pointer;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #9b8368;
 }
 
 :root {
@@ -12,11 +13,11 @@ body {
 }
 
 a {
-  cursor: url("/project-1-taylor-swift/assets/icons/leaf.svg"),pointer;
+  cursor: url("/project-1-taylor-swift/assets/icons/leaf.svg"), pointer;
 }
 
 .evermore {
-  color: #C5AC8F;
+  color: #9b8368;
   font-family: "IM Fell DW Pica", serif;
   font-style: italic;
 }
@@ -91,8 +92,42 @@ img {
 .song-card-2 p {
   display: -webkit-box;
   -webkit-line-clamp: 5;
+  line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .album-card {
+    flex-direction: column;
+    align-items: center;
+    /* This overrides the 240px height from your desktop styles */
+    flex-basis: auto !important; 
+    height: auto !important;
+    gap: 15px;
+  }
+
+  .song-card-1, 
+  .song-card-2 {
+    flex-basis: auto; 
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  img {
+    aspect-ratio: 1 / 1; 
+    width: 100%;
+    max-width: 240px;
+    height: auto !important; 
+    object-fit: cover;
+  }
+
+  .song-card-1 p, 
+  .song-card-2 p {
+    -webkit-line-clamp: unset; 
+    line-clamp: unset;
+  }
 }
